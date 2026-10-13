@@ -1,0 +1,29 @@
+.error-container {
+    text-align: center;
+    margin-top: 100px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+  }
+  
+  .error-container h1 {
+    font-size: 48px;
+    color: #f44336;
+  }
+  
+  .error-container p {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+  
+  .error-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #2196f3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .error-link:hover {
+    background: #1976d2;
+  }
