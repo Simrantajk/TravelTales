@@ -1,0 +1,653 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=DM+Serif+Display:ital@0;1&display=swap%27');
+ :root {
+  /* Sunrise / ocean palette */
+  --sky-1: #a0c4ff;      /* light sky */
+  --sky-2: #60a5fa;      /* deep sky */
+  --sunset: #ff7aa2;     /* coral-pink */
+  --glow: rgba(255, 180, 90, 0.35);
+ 
+  --ocean-1: #0ea5e9;    /* cyan */
+  --ocean-2: #0284c7;    /* blue */
+  --sand: #f5deb3;       /* sandy beige */
+ 
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.35);
+ 
+  --text-1: #0f172a;     /* slate-900 */
+  --text-2: #334155;     /* slate-700 */
+  --error-1: #b71c1c;
+  --error-bg: #fdecea;
+  --accent: #ff7aa2;
+ 
+  --radius: 16px;
+  --shadow-1: 0 10px 30px rgba(13, 23, 42, 0.25);
+  --shadow-2: 0 6px 18px rgba(13, 23, 42, 0.18);
+ 
+  --speed-plane: 24s;
+  --speed-cloud: 60s;
+}
+ 
+/* Global page layout */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+ 
+html, body, .travel-page {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(180deg, var(--sky-1), var(--sky-2) 60%, var(--ocean-2) 100%);
+  font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text-1);
+}
+ 
+/* --- Sky layer ------------------------------------------------------------ */
+.sky {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 55vh;
+  overflow: hidden;
+  pointer-events: none;
+}
+ 
+/* Soft sunset glow behind the plane */
+.sunset-glow {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  width: 35vmax;
+  height: 35vmax;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, var(--glow) 0%, transparent 60%);
+  filter: blur(20px);
+}
+ 
+/* Cloud elements */
+.cloud {
+  position: absolute;
+  top: 12%;
+  width: 220px;
+  height: 70px;
+  border-radius: 35px;
+  background: #fff;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.08));
+}
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+}
+.cloud::before { width: 80px; height: 80px; left: 15px; top: -35px; }
+.cloud::after  { width: 60px; height: 60px; left: 85px; top: -25px; }
+ 
+.c1 { left: -280px; animation: cloud-drift var(--speed-cloud) linear infinite; top: 18%; }
+.c2 { left: -400px; animation: cloud-drift var(--speed-cloud) linear infinite; top: 26%; animation-delay: -10s; }
+.c3 { left: -520px; animation: cloud-drift var(--speed-cloud) linear infinite; top: 10%; animation-delay: -22s; }
+ 
+@keyframes cloud-drift {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(140vw); }
+}
+ 
+/* Plane */
+.plane {
+  position: absolute;
+  left: -10vw;
+  top: 14%;
+  font-size: clamp(24px, 3.2vw, 48px);
+  transform: rotate(5deg);
+  animation: plane-path var(--speed-plane) cubic-bezier(.25,.8,.25,1) infinite;
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,.2));
+}
+ 
+@keyframes plane-path {
+  0%   { transform: translate(0, 0) rotate(5deg); }
+  20%  { transform: translate(25vw, -2vh) rotate(8deg); }
+  40%  { transform: translate(50vw, -1vh) rotate(2deg); }
+  60%  { transform: translate(75vw, 1vh) rotate(-3deg); }
+  80%  { transform: translate(100vw, -1vh) rotate(3deg); }
+  100% { transform: translate(120vw, 0) rotate(5deg); }
+}
+ 
+/* --- Ocean waves at bottom ----------------------------------------------- */
+.ocean {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: min(18vh, 140px);
+  z-index: 0;
+}
+.wave {
+  fill: var(--ocean-1);
+  opacity: .85;
+}
+.wave1 { animation: wave-move 16s linear infinite; }
+.wave2 { fill: var(--ocean-2); opacity: .7; animation: wave-move 24s linear infinite reverse; }
+ 
+@keyframes wave-move {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+ 
+/* --- Glass card ----------------------------------------------------------- */
+.signup-container.glass {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+  margin: clamp(32px, 10vh, 120px) auto 16vh;
+  padding: 28px;
+  background: var(--glass-bg);
+  backdrop-filter: saturate(1.2) blur(8px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-1);
+}
+ 
+/* Title & tagline */
+.brand {
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(28px, 5vw, 40px);
+  margin: 0 0 6px;
+  letter-spacing: .5px;
+}
+.tagline {
+  margin: 0 0 16px;
+  color: var(--text-2);
+}
+ 
+/* --- Error banner --------------------------------------------------------- */
+.error-banner {
+  background: var(--error-bg);
+  color: var(--error-1);
+  border: 1px solid #f5c6c6;
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin: 10px 0 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dismiss-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--error-1);
+}
+ 
+/* --- Form fields ---------------------------------------------------------- */
+form { margin-top: 6px; }
+ 
+.field {
+  position: relative;
+  margin: 22px 0;
+}
+.field input,
+.field select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.5);
+  background: rgba(255,255,255,.55);
+  outline: none;
+  color: var(--text-1);
+  box-shadow: var(--shadow-2);
+  transition: border-color .2s ease, box-shadow .2s ease, transform .12s ease;
+}
+.field input::placeholder { color: transparent; }
+ 
+.field input:focus,
+.field select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(255, 122, 162, .18);
+  transform: translateY(-1px);
+}
+ 
+/* Floating labels for inputs */
+.field label {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #475569;
+  transition: all .2s ease;
+  pointer-events: none;
+}
+.field input:not(:placeholder-shown) + label,
+.field input:focus + label {
+  top: -10px;
+  left: 12px;
+  padding: 0 6px;
+  font-size: .8rem;
+  color: var(--accent);
+  background: rgba(255,255,255,.7);
+  border-radius: 6px;
+}
+ 
+/* ===== Password inside-box toggle ===== */
+.field.password-box { position: relative; }
+.field.password-box input { padding-right: 86px; }
+ 
+.peek-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.8);
+  border-radius: 10px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  color: var(--accent);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform .12s ease, box-shadow .2s ease, background .2s ease;
+}
+.peek-btn:hover {
+  transform: translateY(-50%) scale(1.03);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.92);
+}
+ 
+/* Errors & helpers */
+.error { color: var(--error-1); margin: 6px 2px 0; font-size: .9rem; }
+.help  { color: var(--text-2); margin: 8px 2px 4px; font-size: .9rem; }
+ 
+/* Password rules */
+.password-rules {
+  background: rgba(255,255,255,.6);
+  border: 1px solid rgba(255,255,255,.8);
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin: 8px 0 12px;
+}
+.checklist { list-style: none; margin: 6px 0 0; padding: 0; }
+.checklist li { margin: 4px 0; }
+.checklist .ok { color: #1b5e20; }
+.checklist .not-ok { color: #b71c1c; }
+ 
+/* Linklike buttons */
+.linklike {
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 0;
+}
+.linklike.small { font-size: .92rem; }
+ 
+/* ===== Styled Select (with hover animation & runway glow) ===== */
+.select-field { position: relative; }
+ 
+/* animated runway glow on hover/focus */
+.select-field::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: -6px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity .25s ease, transform .25s ease;
+}
+.select-field:hover::after,
+.select-field:focus-within::after {
+  opacity: .9;
+  transform: translateY(0);
+}
+ 
+/* base custom chevron */
+.select-field select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--accent) 50%),
+    linear-gradient(135deg, var(--accent) 50%, transparent 50%),
+    linear-gradient(to right, rgba(0,0,0,0.12), rgba(0,0,0,0.12));
+  background-position:
+    calc(100% - 20px) calc(50% - 4px),
+    calc(100% - 14px) calc(50% - 4px),
+    calc(100% - 2.2rem) 50%;
+  background-size: 6px 6px, 6px 6px, 1px 1.8rem;
+  background-repeat: no-repeat;
+  padding-right: 2.8rem;
+}
+ 
+/* subtle scale & glow on hover/focus */
+.select-field select:hover,
+.select-field select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(255, 122, 162, .18), 0 6px 14px rgba(0,0,0,.08);
+  transform: translateY(-1px) scale(1.005);
+}
+ 
+/* Placeholder style when nothing selected */
+.select-field select:required:invalid,
+.select-field select[value=""] {
+  color: #64748b;
+}
+ 
+/* Colorful Dropdown Options */
+.select-field select option {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px;
+}
+.select-field select option[value="Traveller"] {
+  background: linear-gradient(135deg, #a0e7e5, #b4f8c8);
+  color: #064e3b;
+}
+.select-field select option[value="Guide"] {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  color: #4c1d95;
+}
+.select-field select option[disabled] {
+  background: #f1f5f9;
+  color: #94a3b8;
+}
+.select-field select option:hover {
+  filter: brightness(1.1);
+  cursor: pointer;
+}
+ 
+/* Boarding pass button */
+.boarding-pass {
+  margin-top: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.9), rgba(255,255,255,.75)) padding-box,
+    radial-gradient(circle at 10% 10%, var(--sand), transparent 40%),
+    radial-gradient(circle at 90% 90%, #ffd4aa, transparent 35%);
+  box-shadow: var(--shadow-1);
+  color: var(--text-1);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  padding: 12px 14px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.boarding-pass .bp-left { text-align: left; }
+.boarding-pass .bp-right {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.bp-title { font-weight: 700; letter-spacing: .4px; }
+.bp-sub { font-size: .9rem; color: var(--text-2); }
+.bp-code { font-weight: 600; color: var(--accent); }
+.bp-plane { font-size: 1.2rem; transition: transform .35s ease; }
+.boarding-pass:hover .bp-plane { transform: translateX(6px); }
+.boarding-pass:disabled { cursor: not-allowed; opacity: .7; }
+ 
+/* Signin link */
+.signin { margin-top: 14px; }
+.signin a { color: var(--accent); text-decoration: none; }
+.signin a:hover { text-decoration: underline; }
+ 
+/* Modal */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,.4);
+  display: grid; place-items: center; z-index: 10;
+}
+.modal-content {
+  background: white; border-radius: 12px; padding: 20px 22px;
+  box-shadow: var(--shadow-1);
+}
+ 
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .plane, .cloud, .wave1, .wave2 { animation: none !important; }
+  .peek-btn { transition: none !important; }
+}
+ 
+ 
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), #ff9eb5);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: var(--shadow-1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+ 
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+ 
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+ 
+ 
+/* === Field Rhythm & Vertical Centering Fixes === */
+ 
+/* Tighter, consistent spacing between fields */
+.field { margin: 18px 0; }                 /* was 22px; tweak to taste */
+.field + .field { margin-top: 18px; }      /* ensure consistency */
+ 
+/* Normalize input height + padding so text sits perfectly centered */
+.field input,
+.field select {
+  height: 48px;             /* fixed control height */
+  padding: 0 14px;          /* vertical padding 0 so text centers */
+  line-height: 48px;        /* helps vertical centering in some browsers */
+  font-size: 1rem;
+}
+ 
+/* Floating label fine-tune */
+.field label {
+  /* stays centered by default */
+  font-size: 1rem;          /* match input size for balance */
+}
+ 
+/* When label floats, make it a touch smaller and crisp */
+.field input:not(:placeholder-shown) + label,
+.field input:focus + label {
+  top: -10px;
+  left: 12px;
+  padding: 0 6px;
+  font-size: .82rem;        /* slightly smaller for clarity */
+}
+ 
+/* Password inside-box toggle must not shift input height */
+.field.password-box input {
+  padding-right: 86px;      /* room for the peek button */
+  line-height: 48px;        /* keep text centered even with icon */
+}
+ 
+/* Autofill fix (Chrome/Safari) - avoid weird inner glow/height changes */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px rgba(255,255,255,.55) inset !important;
+  -webkit-text-fill-color: var(--text-1) !important;
+  caret-color: var(--text-1) !important;
+  transition: background-color 5000s ease-in-out 0s; /* suppress flashing */
+}
+ 
+/* Error/helper spacing tightener so errors don't create big gaps above fields */
+.error, .help {
+  margin-top: 8px;          /* smaller top margin */
+  line-height: 1.25;
+}
+ 
+/* Select: align text centrally vertically within 48px height */
+.select-field select {
+  line-height: 48px;
+  padding-right: 2.8rem;    /* keep chevron space */
+}
+ 
+/* Keep the runway glow & hover scale subtle (optional) */
+.select-field select:hover,
+.select-field select:focus {
+  transform: translateY(-1px) scale(1.003);
+}
+ 
+.submit-btn {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), #ff9eb5);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: var(--shadow-1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter .2s ease;
+}
+.submit-btn .submit-emoji { transition: transform .25s ease; transform: translateY(1px); }
+.submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.15); filter: saturate(1.05); }
+.submit-btn:hover .submit-emoji { transform: translateY(1px) translateX(3px); }
+ 
+ 
+/* Ensure input text stays centered regardless of label state */
+.field input,
+.field select {
+  display: flex;
+  align-items: center; /* centers text vertically */
+  height: 48px;
+  padding: 0 14px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+ 
+/* Remove extra gap caused by floating label */
+.field {
+  margin: 14px 0; /* reduce overall spacing */
+}
+ 
+/* Adjust floating label so it doesn't push layout */
+.field label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
+  background: transparent;
+  padding: 0;
+}
+ 
+/* When floating, keep it small and avoid adding padding */
+.field input:not(:placeholder-shown) + label,
+.field input:focus + label {
+  top: -8px;
+  font-size: 0.8rem;
+  padding: 0; /* remove padding so no extra space */
+  background: none;
+}
+ 
+/* === Success Modal Styling (Travel Theme) === */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: grid;
+  place-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease forwards;
+}
+ 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+ 
+.modal-content {
+  background: linear-gradient(135deg, #ffffff, #fdf2f8);
+  border-radius: 16px;
+  padding: 24px 28px;
+  max-width: 360px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  position: relative;
+  animation: popIn 0.35s ease forwards;
+}
+ 
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+ 
+.modal-content h3 {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.6rem;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+ 
+.modal-content::before {
+  content: "✈️";
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 8px;
+}
+ 
+.modal-content button {
+  margin-top: 16px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), #ff9eb5);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: var(--shadow-2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+ 
+.modal-content button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+ 
+/* === Confetti Animation === */
+.confetti-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+ 
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent);
+  opacity: 0.8;
+  animation: fall 3s linear forwards;
+}
+ 
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+ 
+ 

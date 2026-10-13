@@ -1,0 +1,372 @@
+2025-11-17 04:49:25.724 +00:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-11-17 04:49:25.772 +00:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - Creating key {c28e43ee-ca2f-4012-86ec-2f38ddbe0943} with creation date 2025-11-17 04:49:25Z, activation date 2025-11-17 04:49:25Z, and expiration date 2026-02-15 04:49:25Z.
+2025-11-17 04:49:25.779 +00:00 [WRN] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - No XML encryptor configured. Key {c28e43ee-ca2f-4012-86ec-2f38ddbe0943} may be persisted to storage in unencrypted form.
+2025-11-17 04:49:25.781 +00:00 [INF] Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository - Writing data to file '/home/coder/.aspnet/DataProtection-Keys/key-c28e43ee-ca2f-4012-86ec-2f38ddbe0943.xml'.
+2025-11-17 04:49:25.824 +00:00 [INF] Microsoft.Hosting.Lifetime - Now listening on: http://0.0.0.0:8080
+2025-11-17 04:49:25.827 +00:00 [INF] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-11-17 04:49:25.827 +00:00 [INF] Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-11-17 04:49:25.827 +00:00 [INF] Microsoft.Hosting.Lifetime - Content root path: /home/coder/project/workspace/dotnetapp/
+2025-11-17 04:50:09.641 +00:00 [INF] Microsoft.Hosting.Lifetime - Application is shutting down...
+2025-11-17 04:50:15.075 +00:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-11-17 04:50:15.154 +00:00 [INF] Microsoft.Hosting.Lifetime - Now listening on: http://0.0.0.0:8080
+2025-11-17 04:50:15.158 +00:00 [INF] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-11-17 04:50:15.158 +00:00 [INF] Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-11-17 04:50:15.158 +00:00 [INF] Microsoft.Hosting.Lifetime - Content root path: /home/coder/project/workspace/dotnetapp/
+2025-11-17 04:52:50.938 +00:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2025-11-17 04:52:50.941 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 04:52:51.252 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 04:52:51.462 +00:00 [INF] Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler - Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-11-17 04:52:51.473 +00:00 [INF] Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler - Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2025-11-17 04:52:51.584 +00:00 [INF] dotnetapp.Services.AuthService - Login attempt for email: kanchan@email.com
+2025-11-17 04:52:51.700 +00:00 [INF] dotnetapp.Services.AuthService - User kanchan@email.com logged in successfully with role Guide.
+2025-11-17 05:06:52.309 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:06:52.589 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:06:52.604 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@email.com (Guide) attempting to retrieve all places.
+2025-11-17 05:07:33.724 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:07:34.004 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:07:34.019 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@email.com (Guide) attempting to update place ID: 1
+2025-11-17 05:07:34.118 +00:00 [INF] dotnetapp.Services.PlaceService - Place ID 1 updated successfully by kanchan@email.com (Guide).
+2025-11-17 05:07:34.118 +00:00 [INF] dotnetapp.Controllers.PlaceController - API: Place ID 1 updated successfully.
+2025-11-17 05:07:45.418 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:07:49.967 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:07:49.983 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@email.com (Guide) attempting to update place ID: 5002
+2025-11-17 05:07:52.968 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:07:52.986 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@email.com (Guide) attempting to update place ID: 5002
+2025-11-17 05:07:56.891 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:08:03.010 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:08:03.031 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@email.com (Guide) attempting to update place ID: 5002
+2025-11-17 05:08:03.040 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:08:03.183 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@email.com (Guide) attempting to update place ID: 5002
+2025-11-17 05:08:05.044 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:08:09.237 +00:00 [INF] dotnetapp.Services.PlaceService - Place ID 5002 updated successfully by kanchan@email.com (Guide).
+2025-11-17 05:08:09.237 +00:00 [INF] dotnetapp.Controllers.PlaceController - API: Place ID 5002 updated successfully.
+2025-11-17 05:08:09.678 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:08:09.690 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@email.com (Guide) attempting to update place ID: 5002
+2025-11-17 05:08:15.658 +00:00 [INF] dotnetapp.Services.PlaceService - Place ID 5002 updated successfully by kanchan@email.com (Guide).
+2025-11-17 05:08:15.659 +00:00 [INF] dotnetapp.Controllers.PlaceController - API: Place ID 5002 updated successfully.
+2025-11-17 05:08:27.173 +00:00 [INF] dotnetapp.Services.PlaceService - Place ID 5002 updated successfully by kanchan@email.com (Guide).
+2025-11-17 05:08:27.173 +00:00 [INF] dotnetapp.Controllers.PlaceController - API: Place ID 5002 updated successfully.
+2025-11-17 05:08:27.841 +00:00 [INF] dotnetapp.Services.PlaceService - Place ID 5002 updated successfully by kanchan@email.com (Guide).
+2025-11-17 05:08:27.841 +00:00 [INF] dotnetapp.Controllers.PlaceController - API: Place ID 5002 updated successfully.
+2025-11-17 05:08:30.180 +00:00 [INF] dotnetapp.Services.PlaceService - Place ID 5002 updated successfully by kanchan@email.com (Guide).
+2025-11-17 05:08:30.181 +00:00 [INF] dotnetapp.Controllers.PlaceController - API: Place ID 5002 updated successfully.
+2025-11-17 05:09:23.550 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:09:23.829 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:09:23.830 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@email.com (Guide) attempting to retrieve all places.
+2025-11-17 05:10:10.069 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:10:10.384 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:10:10.384 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@email.com (Guide) attempting to retrieve all places.
+2025-11-17 05:12:37.963 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:12:38.232 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:12:38.233 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@email.com (Guide) attempting to retrieve all places.
+2025-11-17 05:12:54.224 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:12:54.529 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:12:54.530 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@email.com (Guide) attempting to retrieve all places.
+2025-11-17 05:20:44.531 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:20:44.825 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:20:44.832 +00:00 [INF] dotnetapp.Services.AuthService - Attempting new user registration for email: kanchan2@email.com
+2025-11-17 05:20:44.868 +00:00 [WRN] dotnetapp.Services.AuthService - Registration failed: User already exists with email kanchan2@email.com.
+2025-11-17 05:21:12.597 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:21:12.942 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:21:12.951 +00:00 [INF] dotnetapp.Services.AuthService - Attempting new user registration for email: kanchan21@email.com
+2025-11-17 05:21:13.055 +00:00 [INF] dotnetapp.Services.AuthService - New user successfully registered: kanchan21@email.com with role Traveller.
+2025-11-17 05:21:30.045 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:21:30.329 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:21:30.330 +00:00 [INF] dotnetapp.Services.AuthService - Login attempt for email: kanchan2@email.com
+2025-11-17 05:21:30.339 +00:00 [WRN] Microsoft.AspNetCore.Identity.UserManager - Invalid password for user.
+2025-11-17 05:21:30.339 +00:00 [WRN] dotnetapp.Services.AuthService - Login failed: Invalid password for user kanchan2@email.com.
+2025-11-17 05:21:48.310 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:21:48.604 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:21:48.605 +00:00 [INF] dotnetapp.Services.AuthService - Login attempt for email: kanchan2@email.com
+2025-11-17 05:21:48.614 +00:00 [INF] dotnetapp.Services.AuthService - User kanchan2@email.com logged in successfully with role Traveller.
+2025-11-17 05:21:57.888 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:21:58.227 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:21:58.228 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan2@email.com (Traveller) attempting to retrieve all places.
+2025-11-17 05:22:27.670 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:22:27.963 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:22:27.964 +00:00 [INF] dotnetapp.Services.AuthService - Login attempt for email: kanchan@email.com
+2025-11-17 05:22:27.973 +00:00 [INF] dotnetapp.Services.AuthService - User kanchan@email.com logged in successfully with role Guide.
+2025-11-17 05:22:54.605 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:22:55.166 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 05:22:55.167 +00:00 [INF] dotnetapp.Services.AuthService - Login attempt for email: kanchan@email.com
+2025-11-17 05:22:55.175 +00:00 [INF] dotnetapp.Services.AuthService - User kanchan@email.com logged in successfully with role Guide.
+2025-11-17 07:09:49.691 +00:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-11-17 07:09:49.776 +00:00 [INF] Microsoft.Hosting.Lifetime - Now listening on: http://0.0.0.0:8080
+2025-11-17 07:09:49.780 +00:00 [INF] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-11-17 07:09:49.781 +00:00 [INF] Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-11-17 07:09:49.781 +00:00 [INF] Microsoft.Hosting.Lifetime - Content root path: /home/coder/project/workspace/dotnetapp/
+2025-11-17 07:11:11.988 +00:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2025-11-17 07:11:11.990 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 07:11:12.565 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 07:11:12.827 +00:00 [INF] dotnetapp.Services.AuthService - Attempting new user registration for email: guide@gmail.com
+2025-11-17 07:11:13.048 +00:00 [INF] dotnetapp.Services.AuthService - New user successfully registered: guide@gmail.com with role Guide.
+2025-11-17 07:11:28.039 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 07:11:28.610 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 07:11:28.618 +00:00 [INF] dotnetapp.Services.AuthService - Login attempt for email: guide@gmail.com
+2025-11-17 07:11:28.715 +00:00 [INF] dotnetapp.Services.AuthService - User guide@gmail.com logged in successfully with role Guide.
+2025-11-17 07:25:56.990 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 07:25:59.555 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 07:25:59.571 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to add new place: Mullayangiri
+2025-11-17 07:25:59.700 +00:00 [INF] dotnetapp.Services.PlaceService - Place ID: 1002 added successfully by guide@gmail.com (Guide). Name: Mullayangiri
+2025-11-17 07:25:59.702 +00:00 [INF] dotnetapp.Controllers.PlaceController - API: Place 'Mullayangiri' added successfully.
+2025-11-17 07:26:08.335 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 07:26:08.661 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 07:26:08.667 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 07:27:45.572 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 07:27:45.921 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 07:27:45.924 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 07:28:36.520 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 07:28:37.597 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 07:28:37.605 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to update place ID: 2
+2025-11-17 07:28:37.618 +00:00 [INF] dotnetapp.Services.PlaceService - Place ID 2 updated successfully by guide@gmail.com (Guide).
+2025-11-17 07:28:37.618 +00:00 [INF] dotnetapp.Controllers.PlaceController - API: Place ID 2 updated successfully.
+2025-11-17 07:28:37.680 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 07:28:38.507 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 07:28:38.508 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to update place ID: 2
+2025-11-17 07:28:38.517 +00:00 [INF] dotnetapp.Services.PlaceService - Place ID 2 updated successfully by guide@gmail.com (Guide).
+2025-11-17 07:28:38.517 +00:00 [INF] dotnetapp.Controllers.PlaceController - API: Place ID 2 updated successfully.
+2025-11-17 07:29:06.708 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 07:29:07.822 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 07:29:07.827 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to delete place ID: 2
+2025-11-17 07:29:07.855 +00:00 [INF] dotnetapp.Services.PlaceService - Place ID 2 deleted successfully by guide@gmail.com (Guide).
+2025-11-17 07:29:07.856 +00:00 [INF] dotnetapp.Controllers.PlaceController - API: Place ID 2 deleted successfully.
+2025-11-17 07:29:07.969 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 07:29:07.970 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to delete place ID: 2
+2025-11-17 07:29:07.972 +00:00 [WRN] dotnetapp.Services.PlaceService - DeletePlace failed by guide@gmail.com (Guide): Place with ID 2 not found for deletion.
+2025-11-17 07:32:26.953 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 07:32:27.813 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 07:32:27.816 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to update place ID: 1
+2025-11-17 07:32:27.829 +00:00 [INF] dotnetapp.Services.PlaceService - Place ID 1 updated successfully by guide@gmail.com (Guide).
+2025-11-17 07:32:27.829 +00:00 [INF] dotnetapp.Controllers.PlaceController - API: Place ID 1 updated successfully.
+2025-11-17 08:44:59.190 +00:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-11-17 08:44:59.284 +00:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - Creating key {a174e4ff-1647-4728-9fa7-5c1d851fd7f3} with creation date 2025-11-17 08:44:59Z, activation date 2025-11-17 08:44:59Z, and expiration date 2026-02-15 08:44:59Z.
+2025-11-17 08:44:59.290 +00:00 [WRN] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - No XML encryptor configured. Key {a174e4ff-1647-4728-9fa7-5c1d851fd7f3} may be persisted to storage in unencrypted form.
+2025-11-17 08:44:59.293 +00:00 [INF] Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository - Writing data to file '/home/coder/.aspnet/DataProtection-Keys/key-a174e4ff-1647-4728-9fa7-5c1d851fd7f3.xml'.
+2025-11-17 08:44:59.323 +00:00 [INF] Microsoft.Hosting.Lifetime - Now listening on: http://0.0.0.0:8080
+2025-11-17 08:44:59.326 +00:00 [INF] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-11-17 08:44:59.327 +00:00 [INF] Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-11-17 08:44:59.327 +00:00 [INF] Microsoft.Hosting.Lifetime - Content root path: /home/coder/project/workspace/dotnetapp/
+2025-11-17 08:46:06.630 +00:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2025-11-17 08:46:06.632 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 08:46:07.189 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 08:46:07.449 +00:00 [INF] dotnetapp.Services.AuthService - Login attempt for email: guide@gmail.com
+2025-11-17 08:46:07.553 +00:00 [INF] dotnetapp.Services.AuthService - User guide@gmail.com logged in successfully with role Guide.
+2025-11-17 08:46:45.843 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 08:46:46.134 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 08:46:46.141 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 08:49:09.003 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 08:49:09.559 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 08:49:09.562 +00:00 [INF] dotnetapp.Services.AuthService - Login attempt for email: guide@gmail.com
+2025-11-17 08:49:09.571 +00:00 [INF] dotnetapp.Services.AuthService - User guide@gmail.com logged in successfully with role Guide.
+2025-11-17 08:49:38.487 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 08:49:38.837 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 08:49:38.838 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 08:51:48.755 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 08:51:49.831 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 08:51:49.834 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 08:53:53.103 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 08:53:53.414 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 08:53:53.415 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 08:54:06.823 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 08:54:07.132 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 08:54:07.138 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to delete place ID: 1002
+2025-11-17 08:54:09.460 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 08:54:09.461 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to delete place ID: 1002
+2025-11-17 08:54:09.850 +00:00 [INF] dotnetapp.Services.PlaceService - Place ID 1002 deleted successfully by guide@gmail.com (Guide).
+2025-11-17 08:54:09.850 +00:00 [INF] dotnetapp.Controllers.PlaceController - API: Place ID 1002 deleted successfully.
+2025-11-17 08:54:11.848 +00:00 [ERR] dotnetapp.Services.PlaceService - Failed to delete place ID 1002 (Attempted by guide@gmail.com (Guide)).
+Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyException(Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithoutPropagationAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at dotnetapp.Services.PlaceService.DeletePlace(Int32 placeId) in /home/coder/project/workspace/dotnetapp/Services/PlaceService.cs:line 128
+2025-11-17 09:00:02.758 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:00:03.174 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:00:03.174 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 09:02:28.656 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:02:28.958 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:02:28.958 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 09:04:30.144 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:04:31.955 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:04:31.956 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 09:10:01.305 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:10:01.621 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:10:01.622 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 09:15:53.771 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:15:54.084 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:15:54.085 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 09:17:21.044 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:17:21.353 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:17:21.354 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 09:18:05.448 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:18:07.544 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:18:07.555 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to add new place: San Francisco Bridge
+2025-11-17 09:18:07.621 +00:00 [INF] dotnetapp.Services.PlaceService - Place ID: 2002 added successfully by guide@gmail.com (Guide). Name: San Francisco Bridge
+2025-11-17 09:18:07.622 +00:00 [INF] dotnetapp.Controllers.PlaceController - API: Place 'San Francisco Bridge' added successfully.
+2025-11-17 09:18:12.950 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:18:13.265 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:18:13.266 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 09:24:47.725 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:24:48.035 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:24:48.035 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 09:27:58.961 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:27:59.268 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:27:59.269 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 09:28:39.417 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:28:39.732 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:28:39.733 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 09:29:07.810 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:29:08.100 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:29:08.101 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 09:29:30.271 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:29:30.581 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:29:30.581 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 09:41:18.698 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:41:19.222 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:41:19.231 +00:00 [INF] dotnetapp.Services.AuthService - Login attempt for email: kanchan@email.com
+2025-11-17 09:41:19.266 +00:00 [WRN] dotnetapp.Services.AuthService - Login failed: User not found for email kanchan@email.com.
+2025-11-17 09:41:29.787 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:41:30.871 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:41:30.871 +00:00 [INF] dotnetapp.Services.AuthService - Login attempt for email: kanchan@gmail.com
+2025-11-17 09:41:30.880 +00:00 [INF] dotnetapp.Services.AuthService - User kanchan@gmail.com logged in successfully with role Traveller.
+2025-11-17 09:41:45.331 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:41:45.645 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:41:45.646 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@gmail.com (Traveller) attempting to retrieve all places.
+2025-11-17 09:42:35.959 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:42:36.498 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:42:36.499 +00:00 [INF] dotnetapp.Services.AuthService - Login attempt for email: guide@gmail.com
+2025-11-17 09:42:36.512 +00:00 [INF] dotnetapp.Services.AuthService - User guide@gmail.com logged in successfully with role Guide.
+2025-11-17 09:42:45.311 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:42:45.606 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:42:45.607 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 09:47:27.523 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:47:27.802 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:47:27.802 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 09:58:35.718 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:58:36.036 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 09:58:36.036 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 10:00:17.332 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:00:17.646 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:00:17.646 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 10:04:04.957 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:04:05.299 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:04:05.300 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 10:08:33.442 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:08:33.748 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:08:33.749 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 10:11:07.368 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:11:07.679 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:11:07.680 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 10:11:40.788 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:11:41.133 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:11:41.134 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 10:16:56.401 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:16:56.714 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:16:56.715 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 10:19:57.695 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:20:17.986 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:20:18.296 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:20:18.297 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 10:21:27.348 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:21:27.651 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:21:27.652 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 10:23:06.449 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:23:07.021 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:23:07.022 +00:00 [INF] dotnetapp.Services.AuthService - Login attempt for email: kanchan@gmail.com
+2025-11-17 10:23:07.030 +00:00 [INF] dotnetapp.Services.AuthService - User kanchan@gmail.com logged in successfully with role Traveller.
+2025-11-17 10:23:17.578 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:23:17.882 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:23:17.883 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@gmail.com (Traveller) attempting to retrieve all places.
+2025-11-17 10:26:36.837 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:26:37.147 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:26:37.148 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@gmail.com (Traveller) attempting to retrieve all places.
+2025-11-17 10:31:20.264 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:31:20.566 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:31:20.567 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@gmail.com (Traveller) attempting to retrieve all places.
+2025-11-17 10:33:05.894 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:33:06.200 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:33:06.200 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@gmail.com (Traveller) attempting to retrieve all places.
+2025-11-17 10:34:29.503 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:34:29.843 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:34:29.843 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@gmail.com (Traveller) attempting to retrieve all places.
+2025-11-17 10:38:19.604 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:38:19.948 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:38:19.949 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@gmail.com (Traveller) attempting to retrieve all places.
+2025-11-17 10:40:48.753 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:40:49.057 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:40:49.058 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@gmail.com (Traveller) attempting to retrieve all places.
+2025-11-17 10:41:50.228 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:41:50.541 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:41:50.541 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@gmail.com (Traveller) attempting to retrieve all places.
+2025-11-17 10:42:18.680 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:42:18.999 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:42:19.000 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@gmail.com (Traveller) attempting to retrieve all places.
+2025-11-17 10:45:44.257 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:45:44.535 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:45:44.536 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@gmail.com (Traveller) attempting to retrieve all places.
+2025-11-17 10:55:02.686 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:55:02.990 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 10:55:02.991 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@gmail.com (Traveller) attempting to retrieve all places.
+2025-11-17 11:02:51.922 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:02:52.235 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:02:52.235 +00:00 [INF] dotnetapp.Services.PlaceService - User kanchan@gmail.com (Traveller) attempting to retrieve all places.
+2025-11-17 11:03:27.778 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:03:28.335 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:03:28.336 +00:00 [INF] dotnetapp.Services.AuthService - Login attempt for email: guide@gmail.com
+2025-11-17 11:03:28.344 +00:00 [INF] dotnetapp.Services.AuthService - User guide@gmail.com logged in successfully with role Guide.
+2025-11-17 11:03:38.991 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:03:39.306 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:03:39.307 +00:00 [INF] dotnetapp.Services.PlaceService - User guide@gmail.com (Guide) attempting to retrieve all places.
+2025-11-17 11:10:04.640 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:10:05.234 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:10:05.242 +00:00 [INF] dotnetapp.Services.AuthService - Attempting new user registration for email: guide2@gmail.com
+2025-11-17 11:10:05.354 +00:00 [INF] dotnetapp.Services.AuthService - New user successfully registered: guide2@gmail.com with role Guide.
+2025-11-17 11:11:06.815 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:11:07.405 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:11:07.406 +00:00 [INF] dotnetapp.Services.AuthService - Login attempt for email: guide2@gmail.com
+2025-11-17 11:11:07.414 +00:00 [INF] dotnetapp.Services.AuthService - User guide2@gmail.com logged in successfully with role Guide.
+2025-11-17 11:14:37.905 +00:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using '/home/coder/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-11-17 11:14:37.964 +00:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - Creating key {d4a95342-579f-445b-b10d-2a5a1dfc6159} with creation date 2025-11-17 11:14:37Z, activation date 2025-11-17 11:14:37Z, and expiration date 2026-02-15 11:14:37Z.
+2025-11-17 11:14:37.971 +00:00 [WRN] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - No XML encryptor configured. Key {d4a95342-579f-445b-b10d-2a5a1dfc6159} may be persisted to storage in unencrypted form.
+2025-11-17 11:14:37.973 +00:00 [INF] Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository - Writing data to file '/home/coder/.aspnet/DataProtection-Keys/key-d4a95342-579f-445b-b10d-2a5a1dfc6159.xml'.
+2025-11-17 11:14:38.004 +00:00 [INF] Microsoft.Hosting.Lifetime - Now listening on: http://0.0.0.0:8080
+2025-11-17 11:14:38.007 +00:00 [INF] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-11-17 11:14:38.008 +00:00 [INF] Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-11-17 11:14:38.008 +00:00 [INF] Microsoft.Hosting.Lifetime - Content root path: /home/coder/project/workspace/dotnetapp/
+2025-11-17 11:35:05.929 +00:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2025-11-17 11:35:05.931 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:35:06.641 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:35:07.130 +00:00 [INF] dotnetapp.Services.AuthService - Attempting new user registration for email: traveller@gmail.com
+2025-11-17 11:35:07.386 +00:00 [INF] dotnetapp.Services.AuthService - New user successfully registered: traveller@gmail.com with role Traveller.
+2025-11-17 11:35:28.034 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:35:28.591 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:35:28.599 +00:00 [INF] dotnetapp.Services.AuthService - Login attempt for email: traveller@gmail.com
+2025-11-17 11:35:28.701 +00:00 [INF] dotnetapp.Services.AuthService - User traveller@gmail.com logged in successfully with role Traveller.
+2025-11-17 11:35:37.227 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:35:37.541 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:35:37.549 +00:00 [INF] dotnetapp.Services.PlaceService - User traveller@gmail.com (Traveller) attempting to retrieve all places.
+2025-11-17 11:39:16.289 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:39:16.592 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:39:16.593 +00:00 [INF] dotnetapp.Services.PlaceService - User traveller@gmail.com (Traveller) attempting to retrieve all places.
+2025-11-17 11:40:42.039 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:40:42.320 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:40:42.322 +00:00 [INF] dotnetapp.Services.PlaceService - User traveller@gmail.com (Traveller) attempting to retrieve all places.
+2025-11-17 11:41:13.407 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:41:14.484 +00:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+2025-11-17 11:41:14.485 +00:00 [INF] dotnetapp.Services.PlaceService - User traveller@gmail.com (Traveller) attempting to retrieve all places.
